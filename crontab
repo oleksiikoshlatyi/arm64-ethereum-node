@@ -1,0 +1,2 @@
+@reboot docker run -d --rm --name full-node-ethereum --ulimit nofile=10000:10000 -p 8545:8545 -p 30303:30303 -p 6060:6060 -v /volume/ssd2tb/full-ethereum-node:/root/.ethereum oleksiikoshlatyi/client-go:arm64 --http --http.addr "0.0.0.0" --nousb --ipcdisable --syncmode full --metrics --metrics.addr "0.0.0.0" --metrics.port "6060" --metrics.expensive
+
